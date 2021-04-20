@@ -1,0 +1,38 @@
+{
+    "name": "tajul/saajan",
+    "description": "a dummy package for learning",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tajul Islam",
+            "email": "tajul.islam@sigmasolutions.com.bd"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Tajul\\Saajan\\":"src",
+            "Tajul\\Saajan\\Tests\\":"tests",
+            "Tajul\\Saajan\\Database\\Factories\\": "database/factories"
+        }
+    },
+    "scripts": {
+        "test" :  "vendor/bin/phpunit",
+        "test-f" :  "vendor/bin/phpunit --filter"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.5"
+    },
+
+    "extra": {
+        "laravel" : {
+            "providers": [
+                "Tajul\\Saajan\\DummyServiceProvider"
+            ],
+            "alias": {
+                "Calculator" : "Tajul\\Saajan\\Facades\\Calculator"
+            }
+        }
+    }
+}
