@@ -15,7 +15,7 @@ class Post extends Model
 
     protected static function newFactory()
     {
-        return \Tajul\Saajan\Database\Factories\PostFactory::new();
+        return PostFactory::new();
     }
 
     public function author()
